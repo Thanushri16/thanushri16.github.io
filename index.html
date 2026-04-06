@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanushri Rajmohan - Backend Software Engineer</title>
+    <title>Thanushri Rajmohan - Backend & AI Software Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -33,7 +33,6 @@
             overflow-x: hidden;
         }
 
-        /* Subtle atmospheric background */
         body::before {
             content: '';
             position: fixed;
@@ -54,7 +53,6 @@
             100% { opacity: 0.9; }
         }
 
-        /* Grain texture overlay */
         body::after {
             content: '';
             position: fixed;
@@ -73,7 +71,6 @@
             padding: 0 2rem;
         }
 
-        /* Sticky Header */
         header {
             padding: 1.5rem 0;
             border-bottom: 1px solid var(--border);
@@ -147,14 +144,13 @@
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
             padding: 8rem 0 6rem;
             position: relative;
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
             animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
         }
 
@@ -189,7 +185,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--secondary);
             margin-bottom: 1.8rem;
             font-weight: 600;
@@ -200,7 +196,7 @@
             color: var(--text-light);
             margin-bottom: 3rem;
             line-height: 1.8;
-            max-width: 700px;
+            max-width: 750px;
         }
 
         .cta-buttons {
@@ -261,7 +257,6 @@
             color: var(--primary);
         }
 
-        /* Section Styling */
         section {
             padding: 6rem 0;
         }
@@ -288,7 +283,6 @@
             letter-spacing: -0.01em;
         }
 
-        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -345,6 +339,7 @@
         .project-card:nth-child(1) { animation-delay: 0.1s; }
         .project-card:nth-child(2) { animation-delay: 0.2s; }
         .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
 
         .project-header {
             display: flex;
@@ -425,7 +420,6 @@
             color: var(--accent);
         }
 
-        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -448,6 +442,7 @@
         .skill-category:nth-child(1) { animation-delay: 0.1s; }
         .skill-category:nth-child(2) { animation-delay: 0.2s; }
         .skill-category:nth-child(3) { animation-delay: 0.3s; }
+        .skill-category:nth-child(4) { animation-delay: 0.4s; }
 
         .skill-category h3 {
             font-family: 'JetBrains Mono', monospace;
@@ -482,9 +477,8 @@
             color: var(--primary);
         }
 
-        /* About Section */
         .about-content {
-            max-width: 800px;
+            max-width: 850px;
             animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
 
@@ -497,7 +491,7 @@
 
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -530,7 +524,6 @@
             letter-spacing: 0.05em;
         }
 
-        /* Contact Section */
         .contact-content {
             text-align: center;
             max-width: 700px;
@@ -577,7 +570,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Footer */
         footer {
             padding: 3rem 0;
             border-top: 1px solid var(--border);
@@ -594,7 +586,6 @@
             color: var(--text-light);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 3rem;
@@ -626,7 +617,6 @@
             }
         }
 
-        /* Smooth scroll */
         html {
             scroll-behavior: smooth;
         }
@@ -651,9 +641,9 @@
                 <div class="hero-content">
                     <div class="hero-label">Software Engineer</div>
                     <h1>Thanushri Rajmohan</h1>
-                    <p class="hero-subtitle">Backend Systems & Distributed Architecture</p>
+                    <p class="hero-subtitle">Backend Systems, AI/ML & Distributed Architecture</p>
                     <p class="hero-description">
-                        Building scalable, production-grade distributed systems with Python, AI/ML integration, and cloud infrastructure. Proven track record of reducing latency, optimizing throughput, and delivering measurable business impact.
+                        Building production-grade distributed systems and AI-powered applications with deep expertise in high-throughput microservices, multi-agent workflows, and cloud infrastructure. Proven track record of 97% latency improvements and shipping LLM applications at scale.
                     </p>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -671,13 +661,13 @@
                 </div>
                 <div class="about-content">
                     <p>
-                        I'm a Backend Software Engineer with 3 years of experience building scalable distributed systems using Python, Java, and AI/ML on AWS and Azure. Currently at ServiceLink (a Fidelity National Financial company), I own the design and development of platform infrastructure that powers multiple internal services.
+                        I'm a Backend Software Engineer with 3+ years of experience building production-grade distributed systems and AI-powered applications in Python, Java, and cloud platforms (AWS/Azure). Currently at ServiceLink (a Fidelity National Financial company), I own platform infrastructure that serves 25+ internal services.
                     </p>
                     <p>
-                        My work focuses on high-performance backend systems, event-driven architectures, and production AI integration. I've reduced signing workflow latency by 55%, doubled throughput to support 2K+ requests/second, and built multi-agent AI systems that cut manual review time from 30 minutes to under a minute.
+                        My work spans high-performance backend systems, multi-agent AI orchestration, and real-time data pipelines. I've architected LLM-powered mortgage underwriting systems that reduced manual review time by 97% (30min → <1min), optimized workflow services to handle 5000+ requests/second, and built RAG pipelines with 50ms query latency.
                     </p>
                     <p>
-                        I hold a Master's degree in Computer Science from the University of Chicago (GPA: 3.8/4.0) and thrive in fast-paced environments where I can take ownership end-to-end—from architecture decisions to production monitoring.
+                        I hold a Master's degree in Computer Science from the University of Chicago (GPA: 3.8/4.0) and thrive in fast-paced environments where I can ship AI features at scale through rapid iteration and end-to-end ownership—from architecture decisions to production monitoring.
                     </p>
                     <div class="stats">
                         <div class="stat-item">
@@ -685,12 +675,16 @@
                             <span class="stat-label">Latency Reduction</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">2K+</span>
+                            <span class="stat-number">5K+</span>
                             <span class="stat-label">Requests/Second</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">60%</span>
-                            <span class="stat-label">Manual Work Reduced</span>
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Services Supported</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99.8%</span>
+                            <span class="stat-label">System Uptime</span>
                         </div>
                     </div>
                 </div>
@@ -707,20 +701,64 @@
                     <div class="project-card">
                         <div class="project-header">
                             <div>
-                                <h3>Python Backend Platform</h3>
+                                <h3>LLM-Powered Underwriting System</h3>
                             </div>
-                            <span class="project-tag">Production</span>
+                            <span class="project-tag">Production AI</span>
                         </div>
                         <p class="project-description">
-                            Designed and developed a comprehensive Python backend platform serving multiple internal services with standardized async REST APIs, JWT authentication, PostgreSQL persistence, and event-driven workflows via Azure Service Bus.
+                            Architected multi-agent orchestration system using CrewAI and GPT-4 with sidecar-pattern tool invocation, encrypted prompt versioning in Cosmos DB, and full OpenTelemetry observability. Reduced manual review cycles by 97% from 30 minutes to under 1 minute.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">CrewAI</span>
+                            <span class="tech-tag">GPT-4</span>
+                            <span class="tech-tag">Azure Cosmos DB</span>
+                            <span class="tech-tag">OpenTelemetry</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link">ServiceLink Production</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <h3>RAG Pipeline with PostgreSQL Embeddings</h3>
+                            </div>
+                            <span class="project-tag">AI/ML</span>
+                        </div>
+                        <p class="project-description">
+                            Designed and deployed production-ready RAG pipeline using PostgreSQL embeddings (BGE-base-en-v1.5-q4) for contextual retrieval. Achieved 50ms query latency enabling real-time LLM augmentation for downstream language models.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">BGE Embeddings</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link">ServiceLink Production</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <h3>High-Throughput Backend Platform</h3>
+                            </div>
+                            <span class="project-tag">Infrastructure</span>
+                        </div>
+                        <p class="project-description">
+                            Owned design and development of Python backend platform adopted by 25+ internal services. Standardized async REST APIs, JWT authentication, PostgreSQL persistence, and event-driven workflows via Azure Service Bus. Scaled to 5000+ requests/second with 32% improved database connection utilization.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Quart</span>
                             <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">Azure Service Bus</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Celery</span>
                         </div>
                         <div class="project-links">
                             <span class="project-link">ServiceLink Internal</span>
@@ -730,42 +768,19 @@
                     <div class="project-card">
                         <div class="project-header">
                             <div>
-                                <h3>Multi-Agent AI Underwriting System</h3>
+                                <h3>Multi-Agent Credit Risk Platform</h3>
                             </div>
-                            <span class="project-tag">AI/ML</span>
+                            <span class="project-tag">AI Agents</span>
                         </div>
                         <p class="project-description">
-                            Architected a multi-agent mortgage underwriting service using CrewAI and GPT-4 with encrypted versioned prompts in Cosmos DB. Reduced manual review time from 30 minutes to under a minute while maintaining safety through human-in-the-loop workflows.
+                            Built credit risk assessment platform using OpenAI Agents SDK with Temporal orchestration. Integrated RAG via embeddings and PostgreSQL 90-day sliding-window context memory. Achieved 15-minute automated loan approvals with >85% default prediction accuracy through responsible AI safeguards.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">CrewAI</span>
-                            <span class="tech-tag">GPT-4</span>
-                            <span class="tech-tag">Azure Cosmos DB</span>
-                            <span class="tech-tag">Azure Form Recognizer</span>
+                            <span class="tech-tag">OpenAI Agents SDK</span>
+                            <span class="tech-tag">Temporal</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">Python</span>
-                        </div>
-                        <div class="project-links">
-                            <span class="project-link">ServiceLink Internal</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div>
-                                <h3>Genomics Annotation Service (GAS)</h3>
-                            </div>
-                            <span class="project-tag">Cloud</span>
-                        </div>
-                        <p class="project-description">
-                            Created an AWS-hosted, auto-scalable genomics annotation service with Stripe payment integration for subscription management. Implemented S3 for storage, Glacier for archival, and SNS/SQS for job orchestration.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">AWS EC2</span>
-                            <span class="tech-tag">S3</span>
-                            <span class="tech-tag">DynamoDB</span>
-                            <span class="tech-tag">Lambda</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Thanushri16" target="_blank" class="project-link">View Code →</a>
@@ -783,16 +798,44 @@
                 </div>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Languages & Frameworks</h3>
+                        <h3>AI/ML & Agents</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">OpenAI Agents SDK</span>
+                            <span class="skill-item">CrewAI</span>
+                            <span class="skill-item">RAG</span>
+                            <span class="skill-item">LLM Evals</span>
+                            <span class="skill-item">PyTorch</span>
+                            <span class="skill-item">TensorFlow</span>
+                            <span class="skill-item">Scikit-learn</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Backend & APIs</h3>
                         <div class="skill-list">
                             <span class="skill-item">Python</span>
                             <span class="skill-item">Java</span>
-                            <span class="skill-item">SQL</span>
-                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">REST APIs</span>
+                            <span class="skill-item">gRPC</span>
                             <span class="skill-item">FastAPI</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">Quart</span>
                             <span class="skill-item">Django</span>
                             <span class="skill-item">Spring Boot</span>
-                            <span class="skill-item">Quart</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data & Streaming</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">PySpark</span>
+                            <span class="skill-item">Kafka</span>
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">MongoDB</span>
+                            <span class="skill-item">Redis</span>
+                            <span class="skill-item">Snowflake</span>
+                            <span class="skill-item">Cosmos DB</span>
+                            <span class="skill-item">DynamoDB</span>
                         </div>
                     </div>
 
@@ -802,25 +845,10 @@
                             <span class="skill-item">AWS</span>
                             <span class="skill-item">Azure</span>
                             <span class="skill-item">Docker</span>
+                            <span class="skill-item">Kubernetes</span>
                             <span class="skill-item">Terraform</span>
-                            <span class="skill-item">Redis</span>
-                            <span class="skill-item">PostgreSQL</span>
-                            <span class="skill-item">Cosmos DB</span>
-                            <span class="skill-item">Service Bus</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>AI/ML & Tools</h3>
-                        <div class="skill-list">
-                            <span class="skill-item">CrewAI</span>
-                            <span class="skill-item">GPT-4</span>
-                            <span class="skill-item">PyTorch</span>
-                            <span class="skill-item">TensorFlow</span>
-                            <span class="skill-item">Scikit-learn</span>
-                            <span class="skill-item">OpenCV</span>
-                            <span class="skill-item">NLTK</span>
-                            <span class="skill-item">Celery</span>
+                            <span class="skill-item">CI/CD</span>
+                            <span class="skill-item">Git</span>
                         </div>
                     </div>
                 </div>
@@ -835,7 +863,7 @@
                 </div>
                 <div class="contact-content">
                     <p>
-                        I'm always interested in discussing backend architecture, distributed systems, and opportunities to build impactful software. Feel free to reach out!
+                        I'm always interested in discussing AI/ML systems, distributed architecture, and opportunities to build impactful production software. Feel free to reach out!
                     </p>
                     <div class="contact-links">
                         <a href="mailto:thanushritharun@gmail.com" class="contact-link">
@@ -862,7 +890,6 @@
     </footer>
 
     <script>
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -876,7 +903,6 @@
             });
         });
 
-        // Add animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
