@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanushri Rajmohan - Backend & AI Software Engineer</title>
+    <title>Thanushri Rajmohan — Software Engineer | Backend Systems & Applied AI</title>
+    <meta name="description" content="Software Engineer with 3+ years building production-grade distributed systems and AI-powered applications in Python, Java, and AWS/Azure.">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -33,6 +34,7 @@
             overflow-x: hidden;
         }
 
+        /* Subtle atmospheric background */
         body::before {
             content: '';
             position: fixed;
@@ -40,7 +42,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 15% 25%, rgba(139, 115, 85, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 85% 70%, rgba(160, 120, 86, 0.04) 0%, transparent 50%),
                 radial-gradient(circle at 50% 50%, rgba(184, 168, 154, 0.02) 0%, transparent 60%);
@@ -53,6 +55,7 @@
             100% { opacity: 0.9; }
         }
 
+        /* Grain texture overlay */
         body::after {
             content: '';
             position: fixed;
@@ -71,6 +74,7 @@
             padding: 0 2rem;
         }
 
+        /* Sticky Header */
         header {
             padding: 1.5rem 0;
             border-bottom: 1px solid var(--border);
@@ -83,14 +87,8 @@
         }
 
         @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         nav {
@@ -109,7 +107,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2.2rem;
             list-style: none;
         }
 
@@ -136,16 +134,12 @@
             transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .nav-links a:hover {
-            color: var(--primary);
-        }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover::after { width: 100%; }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
+        /* Hero Section */
         .hero {
-            padding: 8rem 0 6rem;
+            padding: 7rem 0 5rem;
             position: relative;
         }
 
@@ -155,14 +149,8 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-label {
@@ -179,29 +167,40 @@
             font-size: 4.5rem;
             font-weight: 700;
             line-height: 1.05;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             color: var(--primary);
             letter-spacing: -0.02em;
         }
 
         .hero-subtitle {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: var(--secondary);
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
             font-weight: 600;
         }
 
         .hero-description {
             font-size: 1.2rem;
             color: var(--text-light);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             line-height: 1.8;
-            max-width: 750px;
+            max-width: 760px;
         }
+
+        .hero-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-meta span { color: var(--accent); }
 
         .cta-buttons {
             display: flex;
             gap: 1.2rem;
+            flex-wrap: wrap;
             animation: fadeInUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
         }
 
@@ -237,13 +236,8 @@
             z-index: -1;
         }
 
-        .btn-primary:hover::before {
-            left: 0;
-        }
-
-        .btn-primary:hover {
-            box-shadow: 0 8px 24px rgba(139, 115, 85, 0.3);
-        }
+        .btn-primary:hover::before { left: 0; }
+        .btn-primary:hover { box-shadow: 0 8px 24px rgba(139, 115, 85, 0.3); }
 
         .btn-secondary {
             background: transparent;
@@ -257,12 +251,11 @@
             color: var(--primary);
         }
 
-        section {
-            padding: 6rem 0;
-        }
+        /* Section Styling */
+        section { padding: 5.5rem 0; }
 
         .section-header {
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
             animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
 
@@ -283,6 +276,152 @@
             letter-spacing: -0.01em;
         }
 
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            bottom: 0.6rem;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent) 0%, rgba(139, 115, 85, 0.15) 100%);
+        }
+
+        .job {
+            position: relative;
+            margin-bottom: 3.5rem;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        .job:last-child { margin-bottom: 0; }
+
+        .job::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.7rem;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--background);
+            border: 2px solid var(--accent);
+            transform: translateX(-4.5px);
+            transition: all 0.3s ease;
+        }
+
+        .job:hover::before {
+            background: var(--accent);
+            box-shadow: 0 0 0 5px rgba(139, 115, 85, 0.15);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .job-title {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .job-company {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .job-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .job-location {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .job-bullets {
+            list-style: none;
+        }
+
+        .job-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.9rem;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+        .job-bullets li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .job-bullets strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .job-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.2rem;
+        }
+
+        /* Project Filters */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-btn {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            padding: 0.6rem 1.3rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .filter-btn:hover {
+            border-color: rgba(139, 115, 85, 0.5);
+            color: var(--primary);
+        }
+
+        .filter-btn.active {
+            background: var(--accent);
+            color: var(--background);
+            border-color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -292,12 +431,15 @@
         .project-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            padding: 2.5rem;
+            padding: 2.2rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+            display: flex;
+            flex-direction: column;
         }
+
+        .project-card.hidden { display: none; }
 
         .project-card::before {
             content: '';
@@ -320,6 +462,7 @@
             background: radial-gradient(circle at 50% 0%, rgba(139, 115, 85, 0.03) 0%, transparent 70%);
             opacity: 0;
             transition: opacity 0.4s ease;
+            pointer-events: none;
         }
 
         .project-card:hover {
@@ -328,69 +471,92 @@
             border-color: rgba(139, 115, 85, 0.3);
         }
 
-        .project-card:hover::before {
-            height: 100%;
-        }
-
-        .project-card:hover::after {
-            opacity: 1;
-        }
-
-        .project-card:nth-child(1) { animation-delay: 0.1s; }
-        .project-card:nth-child(2) { animation-delay: 0.2s; }
-        .project-card:nth-child(3) { animation-delay: 0.3s; }
-        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:hover::before { height: 100%; }
+        .project-card:hover::after { opacity: 1; }
 
         .project-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 1.5rem;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
             position: relative;
             z-index: 1;
         }
 
         .project-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
 
         .project-tag {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--accent);
             background: rgba(139, 115, 85, 0.15);
-            padding: 0.4rem 0.8rem;
+            padding: 0.4rem 0.7rem;
             border-radius: 2px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-weight: 500;
             border: 1px solid rgba(139, 115, 85, 0.2);
+            white-space: nowrap;
         }
 
         .project-description {
             color: var(--text-light);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             line-height: 1.7;
-            font-size: 1.05rem;
+            font-size: 1.02rem;
             position: relative;
             z-index: 1;
+        }
+
+        .project-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 1rem 0;
+            margin-bottom: 1.2rem;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            z-index: 1;
+        }
+
+        .metric { display: flex; flex-direction: column; }
+
+        .metric-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary);
+            line-height: 1.2;
+        }
+
+        .metric-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.2rem;
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.6rem;
-            margin-bottom: 1.5rem;
+            gap: 0.5rem;
+            margin-bottom: 1.3rem;
             position: relative;
             z-index: 1;
         }
 
         .tech-tag {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             color: var(--text-light);
             background: var(--code-bg);
             padding: 0.3rem 0.7rem;
@@ -403,11 +569,12 @@
             gap: 1rem;
             position: relative;
             z-index: 1;
+            margin-top: auto;
         }
 
         .project-link {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--secondary);
             text-decoration: none;
             text-transform: uppercase;
@@ -416,13 +583,51 @@
             font-weight: 500;
         }
 
-        .project-link:hover {
-            color: var(--accent);
+        a.project-link:hover { color: var(--accent); }
+
+        /* Show more projects */
+        .more-toggle-wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 2.5rem;
         }
 
+        .more-toggle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--secondary);
+            background: transparent;
+            border: 1px solid var(--border);
+            padding: 0.9rem 2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .more-toggle:hover {
+            border-color: var(--accent);
+            color: var(--primary);
+            background: rgba(139, 115, 85, 0.08);
+        }
+
+        .more-toggle .chev {
+            display: inline-block;
+            margin-left: 0.4rem;
+            transition: transform 0.3s ease;
+        }
+
+        .more-toggle.open .chev { transform: rotate(180deg); }
+
+        .more-grid { margin-top: 2rem; }
+
+        /* display:grid would otherwise beat the [hidden] attribute */
+        .more-grid[hidden] { display: none; }
+
+        /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
@@ -430,7 +635,6 @@
             background: var(--card-bg);
             border: 1px solid var(--border);
             padding: 2rem;
-            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
             transition: all 0.3s ease;
         }
 
@@ -439,14 +643,9 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
 
-        .skill-category:nth-child(1) { animation-delay: 0.1s; }
-        .skill-category:nth-child(2) { animation-delay: 0.2s; }
-        .skill-category:nth-child(3) { animation-delay: 0.3s; }
-        .skill-category:nth-child(4) { animation-delay: 0.4s; }
-
         .skill-category h3 {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--primary);
             margin-bottom: 1.2rem;
             text-transform: uppercase;
@@ -462,10 +661,10 @@
 
         .skill-item {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: var(--text);
             background: var(--code-bg);
-            padding: 0.5rem 1rem;
+            padding: 0.45rem 0.9rem;
             border-radius: 2px;
             border: 1px solid var(--border);
             transition: all 0.3s ease;
@@ -477,6 +676,7 @@
             color: var(--primary);
         }
 
+        /* About Section */
         .about-content {
             max-width: 850px;
             animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -489,6 +689,91 @@
             margin-bottom: 1.5rem;
         }
 
+        .about-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin: 2.5rem 0;
+        }
+
+        /* Flip cards */
+        .about-col {
+            perspective: 1400px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .flip-inner {
+            display: grid;
+            transform-style: preserve-3d;
+            transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+            height: 100%;
+        }
+
+        .about-col.flipped .flip-inner { transform: rotateY(180deg); }
+
+        .flip-face {
+            grid-area: 1 / 1;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-left: 2px solid var(--accent);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-col:hover .flip-face,
+        .about-col:focus-visible .flip-face {
+            border-color: rgba(139, 115, 85, 0.4);
+            border-left-color: var(--accent-warm);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .flip-back { transform: rotateY(180deg); }
+
+        .about-col h3 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.9rem;
+            font-weight: 700;
+        }
+
+        .about-col p {
+            font-size: 1.06rem;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        .flip-teaser {
+            color: var(--text-light);
+            flex: 1;
+        }
+
+        .flip-hint {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .flip-hint .arrow { transition: transform 0.3s ease; }
+        .about-col:hover .flip-hint .arrow { transform: translateX(4px); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .flip-inner { transition: none; }
+        }
+
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -498,7 +783,7 @@
 
         .stat-item {
             border-left: 3px solid var(--accent);
-            padding-left: 1.5rem;
+            padding-left: 1.3rem;
             transition: all 0.3s ease;
         }
 
@@ -509,21 +794,67 @@
 
         .stat-number {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--primary);
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .stat-label {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            line-height: 1.5;
         }
 
+        /* Education */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .edu-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .edu-card:hover {
+            border-color: rgba(139, 115, 85, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .edu-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .edu-degree {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+        }
+
+        .edu-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .edu-courses {
+            font-size: 0.98rem;
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
         .contact-content {
             text-align: center;
             max-width: 700px;
@@ -541,7 +872,7 @@
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
@@ -550,10 +881,10 @@
             align-items: center;
             gap: 0.7rem;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text);
             text-decoration: none;
-            padding: 1rem 1.8rem;
+            padding: 1rem 1.6rem;
             border: 2px solid var(--border);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-transform: uppercase;
@@ -570,15 +901,14 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
+        /* Footer */
         footer {
             padding: 3rem 0;
             border-top: 1px solid var(--border);
-            margin-top: 4rem;
+            margin-top: 3rem;
         }
 
-        .footer-content {
-            text-align: center;
-        }
+        .footer-content { text-align: center; }
 
         .footer-content p {
             font-family: 'JetBrains Mono', monospace;
@@ -586,40 +916,23 @@
             color: var(--text-light);
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            .projects-grid,
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                text-align: center;
-            }
+            .container { padding: 0 1.3rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero-subtitle { font-size: 1.15rem; }
+            .section-title { font-size: 2rem; }
+            .nav-links { gap: 1.1rem; }
+            .nav-links a { font-size: 0.72rem; }
+            .projects-grid, .skills-grid, .education-grid, .about-split { grid-template-columns: 1fr; }
+            .about-split { gap: 1.8rem; }
+            .cta-buttons { flex-direction: column; }
+            .btn { text-align: center; }
+            .timeline { padding-left: 1.6rem; }
+            .job::before { left: -1.6rem; }
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
@@ -628,8 +941,10 @@
             <div class="logo">TR</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -639,15 +954,19 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-label">Software Engineer</div>
+                    <div class="hero-label">Software Engineer II</div>
                     <h1>Thanushri Rajmohan</h1>
-                    <p class="hero-subtitle">Backend Systems, AI/ML & Distributed Architecture</p>
+                    <p class="hero-subtitle">Backend Distributed Systems &amp; Applied AI</p>
                     <p class="hero-description">
-                        Building production-grade distributed systems and AI-powered applications with deep expertise in high-throughput microservices, multi-agent workflows, and cloud infrastructure. Proven track record of 97% latency improvements and shipping LLM applications at scale.
+                        I build production-grade distributed systems and AI-powered applications in Python, Java, and AWS/Azure. My work spans high-throughput low-latency microservices, event-driven architectures, and multi-agent LLM systems running under real production load — with concurrency, reliability, and measurable business impact as the throughline.
+                    </p>
+                    <p class="hero-meta">
+                        <span>◆</span> 3+ Years Experience &nbsp;&nbsp;<span>◆</span> M.S. CS, University of Chicago &nbsp;&nbsp;<span>◆</span> Backend + Applied AI
                     </p>
                     <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                        <a href="https://github.com/Thanushri16" target="_blank" class="btn btn-secondary">View GitHub</a>
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#experience" class="btn btn-secondary">Experience</a>
+                        <a href="https://github.com/Thanushri16" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -661,32 +980,160 @@
                 </div>
                 <div class="about-content">
                     <p>
-                        I'm a Backend Software Engineer with 3+ years of experience building production-grade distributed systems and AI-powered applications in Python, Java, and cloud platforms (AWS/Azure). Currently at ServiceLink (a Fidelity National Financial company), I own platform infrastructure that serves 25+ internal services.
+                        I'm a Software Engineer II at ServiceLink (a Fidelity National Financial company), where I own the design and development of the Python backend platform adopted by 25+ internal services — and the AI infrastructure built on top of it.
                     </p>
+
+                    <div class="about-split">
+                        <div class="about-col" role="button" tabindex="0" aria-expanded="false">
+                            <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                    <h3>Backend &amp; Distributed Systems</h3>
+                                    <p class="flip-teaser">Async Python and Java services, event-driven workflows, and the caching layers that keep them fast under load.</p>
+                                    <div class="flip-hint">Read more <span class="arrow">→</span></div>
+                                </div>
+                                <div class="flip-face flip-back">
+                                    <h3>Backend &amp; Distributed Systems</h3>
+                                    <p>
+                                        Most of what I've learned came from things breaking under load — connection pools running dry during traffic spikes, memory filling up on large document transfers, requests taking longer than anyone wanted. The work I'm most attached to is a core workflow service that was taking three seconds a request and buckling at peak. Redis caching and Celery for the async paths brought it under a second and up to 5000 requests per second, which meant teams stopped designing around it and started building on it.
+                                    </p>
+                                    <div class="flip-hint"><span class="arrow">←</span> Back</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-col" role="button" tabindex="0" aria-expanded="false">
+                            <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                    <h3>Applied AI</h3>
+                                    <p class="flip-teaser">Multi-agent workflows and RAG systems built like backend services — routing, retries, guardrails, and a human in the loop.</p>
+                                    <div class="flip-hint">Read more <span class="arrow">→</span></div>
+                                </div>
+                                <div class="flip-face flip-back">
+                                    <h3>Applied AI</h3>
+                                    <p>
+                                        Working on LLM systems at ServiceLink pulled me toward AI, and the backend instincts carried over more than I expected — agent workflows fail in familiar ways, so routing, caching, and durable execution matter as much as prompts. The clearest example is a multi-agent title underwriting system: a review that used to take a person thirty minutes now takes under one, across 100,000 reviews a year. Underwriters still make the call — the agents just do the reading first.
+                                    </p>
+                                    <div class="flip-hint"><span class="arrow">←</span> Back</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <p>
-                        My work spans high-performance backend systems, multi-agent AI orchestration, and real-time data pipelines. I've architected LLM-powered mortgage underwriting systems that reduced manual review time by 97% (30min → <1min), optimized workflow services to handle 5000+ requests/second, and built RAG pipelines with 50ms query latency.
-                    </p>
-                    <p>
-                        I hold a Master's degree in Computer Science from the University of Chicago (GPA: 3.8/4.0) and thrive in fast-paced environments where I can ship AI features at scale through rapid iteration and end-to-end ownership—from architecture decisions to production monitoring.
+                        I hold an M.S. in Computer Science from the University of Chicago (GPA 3.8/4.0) and a B.Tech in Computer Science from VIT (GPA 9.3/10). For the past year I've also been part of the architecture team, which means I see systems while they're still taking shape rather than after. Alongside that I review a good deal of the team's code and mentor a couple of junior engineers — both of which have made me better at explaining why a design choice matters, not just making it. I like owning a system the whole way, from those early conversations through to how it holds up once it's live.
                     </p>
                     <div class="stats">
                         <div class="stat-item">
-                            <span class="stat-number">55%</span>
-                            <span class="stat-label">Latency Reduction</span>
+                            <span class="stat-number">97%</span>
+                            <span class="stat-label">Reviewer Decision<br>Time Reduced</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">5K+</span>
-                            <span class="stat-label">Requests/Second</span>
+                            <span class="stat-label">Requests/Second<br>at Peak Load</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">25+</span>
-                            <span class="stat-label">Services Supported</span>
+                            <span class="stat-number">230+</span>
+                            <span class="stat-label">Agent Workflows<br>Orchestrated</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">99.8%</span>
-                            <span class="stat-label">System Uptime</span>
+                            <span class="stat-label">Production<br>Uptime</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Internal Services<br>on My Platform</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Where I've Worked</div>
+                    <h2 class="section-title">Experience</h2>
+                </div>
+                <div class="timeline">
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Software Engineer II <span class="job-company">· ServiceLink</span></div>
+                            <div class="job-date">08/2023 — Present</div>
+                        </div>
+                        <div class="job-location">Fidelity National Financial</div>
+                        <ul class="job-bullets">
+                            <li>Serve as a <strong>key member of the architecture team</strong> for the past year, contributing to design reviews and system design decisions for new platform and AI services across engineering teams.</li>
+                            <li>Act as a <strong>primary code reviewer</strong> for the platform codebase and <strong>mentor junior engineers</strong>, onboarding them to the backend stack and raising review standards across the team.</li>
+                            <li>Engineered a production <strong>LLM gateway</strong> using FastAPI, OpenAI Agents SDK, and Temporal, orchestrating <strong>230+ agent workflows</strong> with model routing, semantic caching, guardrails, human approvals, and durable execution.</li>
+                            <li>Architected an LLM-powered <strong>title underwriting system</strong> with multi-agent orchestration (CrewAI, GPT-4) and sidecar-pattern tool invocation, secure prompt versioning in Cosmos DB, and OpenTelemetry observability — reducing reviewer decision time by <strong>97% (30 min → under 1 min)</strong> across 100K+ annual reviews.</li>
+                            <li>Built <strong>human-in-the-loop AI agents with 200 ms decision latency</strong> that ingest real-time mortgage appraisal status feeds and vendor performance history, applying multi-criteria logic to automate operational decisions and cut manual vendor management effort by <strong>60%</strong>.</li>
+                            <li>Owned the design and development of a <strong>Python backend platform adopted by 25+ internal services</strong>, standardizing async REST APIs, JWT authentication, PostgreSQL persistence, and event-driven workflows via Azure Service Bus.</li>
+                            <li>Optimized a high-throughput workflow service with Redis caching and Celery async task orchestration, reducing end-to-end latency by <strong>55% (3s → under 1s)</strong> and scaling throughput to <strong>5000+ requests/second</strong> under peak concurrent load.</li>
+                            <li>Scaled the platform for high-concurrency workloads, improving database connection utilization by <strong>32%</strong> through SQLAlchemy connection pooling and async session management — resolving connection exhaustion during traffic spikes.</li>
+                            <li>Implemented secure streaming transfers for <strong>100 MB+ mortgage documents</strong> using chunked multipart uploads/downloads to Azure Blob via SAS URLs, preventing server-side memory exhaustion under concurrent load.</li>
+                            <li>Maintained <strong>99.8% uptime</strong> across distributed microservices via <strong>78% Pytest coverage</strong> (unit + integration), Terraform IaC, Docker containerization, and automated CI/CD pipelines.</li>
+                        </ul>
+                        <div class="job-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Quart</span>
+                            <span class="tech-tag">OpenAI Agents SDK</span>
+                            <span class="tech-tag">Temporal</span>
+                            <span class="tech-tag">CrewAI</span>
+                            <span class="tech-tag">GPT-4</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Celery</span>
+                            <span class="tech-tag">Azure Service Bus</span>
+                            <span class="tech-tag">Cosmos DB</span>
+                            <span class="tech-tag">OpenTelemetry</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Software Engineer <span class="job-company">· Panasonic</span></div>
+                            <div class="job-date">06/2022 — 09/2022</div>
+                        </div>
+                        <div class="job-location">Chicago, IL</div>
+                        <ul class="job-bullets">
+                            <li>Engineered <strong>Java Spring Boot microservices</strong> with REST APIs, multithreading, and concurrent processing integrated with PostgreSQL and MongoDB, powering an Angular SPA for real-time operational visibility, workflow status, and production analytics.</li>
+                            <li>Automated <strong>PostgreSQL-to-Snowflake migration</strong> for a Manufacturing Execution System (MES), achieving <strong>90% schema conversion efficiency</strong> through iterative validation and fault-tolerant ETL pipelines — enabling analytics-ready data for ML and reporting.</li>
+                            <li>Redesigned a concurrent <strong>OCR pipeline processing 100K+ documents/day</strong> using Java ExecutorService, batch-based PDF splitting, and adaptive image normalization — reducing extraction failures by <strong>22%</strong> and improving downstream ML defect-detection accuracy.</li>
+                        </ul>
+                        <div class="job-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag">ETL</span>
+                            <span class="tech-tag">Multithreading</span>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Software Engineer <span class="job-company">· RxDataScience Inc.</span></div>
+                            <div class="job-date">03/2021 — 06/2021</div>
+                        </div>
+                        <div class="job-location">India</div>
+                        <ul class="job-bullets">
+                            <li>Established a user management system with authentication and <strong>role-based access control (RBAC)</strong> on Django and SQLAlchemy, reducing unauthorized access incidents by <strong>91%</strong>.</li>
+                            <li>Accelerated pharmaceutical data pipelines by <strong>35%</strong> by parallelizing statistical modeling for clinical research on GPU-enabled AWS EC2 instances using CUDA Python libraries (CuPy).</li>
+                        </ul>
+                        <div class="job-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">SQLAlchemy</span>
+                            <span class="tech-tag">AWS EC2</span>
+                            <span class="tech-tag">CUDA / CuPy</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -695,86 +1142,181 @@
             <div class="container">
                 <div class="section-header">
                     <div class="section-label">Featured Work</div>
-                    <h2 class="section-title">Key Projects</h2>
+                    <h2 class="section-title">Projects</h2>
                 </div>
+
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI / ML</button>
+                    <button class="filter-btn" data-filter="backend">Backend &amp; Distributed</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud &amp; Data</button>
+                </div>
+
                 <div class="projects-grid">
-                    <div class="project-card">
+
+                    <div class="project-card" data-tags="ai backend">
                         <div class="project-header">
-                            <div>
-                                <h3>LLM-Powered Underwriting System</h3>
-                            </div>
-                            <span class="project-tag">Production AI</span>
+                            <h3>Production LLM Gateway</h3>
+                            <span class="project-tag">Production</span>
                         </div>
                         <p class="project-description">
-                            Architected multi-agent orchestration system using CrewAI and GPT-4 with sidecar-pattern tool invocation, encrypted prompt versioning in Cosmos DB, and full OpenTelemetry observability. Reduced manual review cycles by 97% from 30 minutes to under 1 minute.
+                            A production LLM gateway built on FastAPI, the OpenAI Agents SDK, and Temporal — orchestrating agent workflows with model routing, semantic caching, safety guardrails, human approval steps, and durable execution that survives process restarts.
                         </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">230+</span><span class="metric-label">Agent Workflows</span></div>
+                            <div class="metric"><span class="metric-value">Durable</span><span class="metric-label">Execution Layer</span></div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">OpenAI Agents SDK</span>
+                            <span class="tech-tag">Temporal</span>
+                            <span class="tech-tag">Semantic Caching</span>
+                            <span class="tech-tag">Guardrails</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links"><span class="project-link">ServiceLink · Internal</span></div>
+                    </div>
+
+                    <div class="project-card" data-tags="ai backend">
+                        <div class="project-header">
+                            <h3>Multi-Agent Title Underwriting System</h3>
+                            <span class="project-tag">AI / Production</span>
+                        </div>
+                        <p class="project-description">
+                            An LLM-powered title underwriting system using multi-agent orchestration (CrewAI + GPT-4) with sidecar-pattern tool invocation, encrypted versioned prompts in Cosmos DB, and OpenTelemetry observability — with human-in-the-loop review preserved for safety.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">97%</span><span class="metric-label">Decision Time ↓</span></div>
+                            <div class="metric"><span class="metric-value">100K+</span><span class="metric-label">Annual Reviews</span></div>
+                            <div class="metric"><span class="metric-value">30m → &lt;1m</span><span class="metric-label">Per Review</span></div>
+                        </div>
                         <div class="project-tech">
                             <span class="tech-tag">CrewAI</span>
                             <span class="tech-tag">GPT-4</span>
-                            <span class="tech-tag">Azure Cosmos DB</span>
+                            <span class="tech-tag">Cosmos DB</span>
                             <span class="tech-tag">OpenTelemetry</span>
+                            <span class="tech-tag">Azure Form Recognizer</span>
                             <span class="tech-tag">Python</span>
                         </div>
-                        <div class="project-links">
-                            <span class="project-link">ServiceLink Production</span>
-                        </div>
+                        <div class="project-links"><span class="project-link">ServiceLink · Internal</span></div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-tags="ai backend">
                         <div class="project-header">
-                            <div>
-                                <h3>RAG Pipeline with PostgreSQL Embeddings</h3>
-                            </div>
-                            <span class="project-tag">AI/ML</span>
+                            <h3>Real-Time Vendor Decision Agents</h3>
+                            <span class="project-tag">AI / Real-Time</span>
                         </div>
                         <p class="project-description">
-                            Designed and deployed production-ready RAG pipeline using PostgreSQL embeddings (BGE-base-en-v1.5-q4) for contextual retrieval. Achieved 50ms query latency enabling real-time LLM augmentation for downstream language models.
+                            Human-in-the-loop AI agents that ingest real-time mortgage appraisal status feeds and vendor performance history, applying multi-criteria logic to automate operational decision workflows at sub-second latency.
                         </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">200ms</span><span class="metric-label">Decision Latency</span></div>
+                            <div class="metric"><span class="metric-value">60%</span><span class="metric-label">Manual Effort ↓</span></div>
+                        </div>
                         <div class="project-tech">
-                            <span class="tech-tag">RAG</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">BGE Embeddings</span>
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Event Streaming</span>
+                            <span class="tech-tag">Human-in-the-Loop</span>
+                            <span class="tech-tag">Azure</span>
+                        </div>
+                        <div class="project-links"><span class="project-link">ServiceLink · Internal</span></div>
+                    </div>
+
+                    <div class="project-card" data-tags="ai">
+                        <div class="project-header">
+                            <h3>Intelligent Patient Intake Assistant</h3>
+                            <span class="project-tag">AI / RAG</span>
+                        </div>
+                        <p class="project-description">
+                            A retrieval-augmented assistant (FastAPI, PostgreSQL, pgvector) for patient intake and clinic documentation retrieval, with confidence-based escalation to a human when the model isn't sure. Evaluated across a 200-conversation benchmark.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">0.91</span><span class="metric-label">Faithfulness</span></div>
+                            <div class="metric"><span class="metric-value">0.85</span><span class="metric-label">Retrieval Precision</span></div>
+                            <div class="metric"><span class="metric-value">200</span><span class="metric-label">Benchmark Convos</span></div>
+                        </div>
+                        <div class="project-tech">
                             <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">pgvector</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">LLM Evals</span>
                         </div>
                         <div class="project-links">
-                            <span class="project-link">ServiceLink Production</span>
+                            <a href="https://github.com/Thanushri16/Patient-Visit-Preparation-AI-Assistant" target="_blank" rel="noopener" class="project-link">View Code →</a>
                         </div>
                     </div>
 
-                    <div class="project-card">
+                </div>
+
+                <div class="more-toggle-wrap">
+                    <button class="more-toggle" id="moreToggle" aria-expanded="false" aria-controls="moreProjects">
+                        Show More Projects <span class="chev">▾</span>
+                    </button>
+                </div>
+
+                <div class="projects-grid more-grid" id="moreProjects" hidden>
+
+                    <div class="project-card" data-tags="backend">
                         <div class="project-header">
-                            <div>
-                                <h3>High-Throughput Backend Platform</h3>
-                            </div>
-                            <span class="project-tag">Infrastructure</span>
+                            <h3>Python Backend Platform</h3>
+                            <span class="project-tag">Platform</span>
                         </div>
                         <p class="project-description">
-                            Owned design and development of Python backend platform adopted by 25+ internal services. Standardized async REST APIs, JWT authentication, PostgreSQL persistence, and event-driven workflows via Azure Service Bus. Scaled to 5000+ requests/second with 32% improved database connection utilization.
+                            The shared Python backend platform used across ServiceLink's internal services — standardizing async REST APIs, JWT authentication, PostgreSQL persistence, and event-driven workflows over Azure Service Bus. Includes SQLAlchemy pooling tuned to survive traffic spikes and chunked multipart streaming for 100&nbsp;MB+ documents.
                         </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">25+</span><span class="metric-label">Services Adopted</span></div>
+                            <div class="metric"><span class="metric-value">32%</span><span class="metric-label">Conn. Utilization ↑</span></div>
+                            <div class="metric"><span class="metric-value">99.8%</span><span class="metric-label">Uptime</span></div>
+                        </div>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Quart</span>
+                            <span class="tech-tag">SQLAlchemy</span>
                             <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">Azure Service Bus</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">Celery</span>
+                            <span class="tech-tag">Azure Blob</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Docker</span>
                         </div>
-                        <div class="project-links">
-                            <span class="project-link">ServiceLink Internal</span>
-                        </div>
+                        <div class="project-links"><span class="project-link">ServiceLink · Internal</span></div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-tags="backend">
                         <div class="project-header">
-                            <div>
-                                <h3>Multi-Agent Credit Risk Platform</h3>
-                            </div>
-                            <span class="project-tag">AI Agents</span>
+                            <h3>High-Throughput Workflow Service</h3>
+                            <span class="project-tag">Performance</span>
                         </div>
                         <p class="project-description">
-                            Built credit risk assessment platform using OpenAI Agents SDK with Temporal orchestration. Integrated RAG via embeddings and PostgreSQL 90-day sliding-window context memory. Achieved 15-minute automated loan approvals with >85% default prediction accuracy through responsible AI safeguards.
+                            Latency and throughput optimization of a core workflow service — introducing Redis caching and Celery for asynchronous task orchestration, then load-testing the result to validate behavior under sustained peak concurrency.
                         </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">55%</span><span class="metric-label">Latency ↓ (3s→&lt;1s)</span></div>
+                            <div class="metric"><span class="metric-value">5000+</span><span class="metric-label">Req/Sec Peak</span></div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Celery</span>
+                            <span class="tech-tag">Async I/O</span>
+                            <span class="tech-tag">Load Testing</span>
+                        </div>
+                        <div class="project-links"><span class="project-link">ServiceLink · Internal</span></div>
+                    </div>
+
+                    <div class="project-card" data-tags="ai">
+                        <div class="project-header">
+                            <h3>Multi-Agent Credit Risk Assessment Platform</h3>
+                            <span class="project-tag">AI / RAG</span>
+                        </div>
+                        <p class="project-description">
+                            A credit risk platform built on the OpenAI Agents SDK with Temporal orchestration, RAG-grounded policy retrieval, and Postgres-backed session memory. Integrates banking and real-estate APIs behind fair-lending guardrails that enforce protected-class filtering and output validation.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">89%</span><span class="metric-label">Top-5 Retrieval Acc.</span></div>
+                            <div class="metric"><span class="metric-value">Fair-Lending</span><span class="metric-label">Guardrails</span></div>
+                        </div>
                         <div class="project-tech">
                             <span class="tech-tag">OpenAI Agents SDK</span>
                             <span class="tech-tag">Temporal</span>
@@ -783,9 +1325,62 @@
                             <span class="tech-tag">Python</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Thanushri16" target="_blank" class="project-link">View Code →</a>
+                            <span class="project-link">Private Repository</span>
                         </div>
                     </div>
+
+                    <div class="project-card" data-tags="cloud backend">
+                        <div class="project-header">
+                            <h3>Genomics Annotation Service (GAS)</h3>
+                            <span class="project-tag">Cloud / AWS</span>
+                        </div>
+                        <p class="project-description">
+                            An auto-scalable, load-balanced AWS service for genomic sequence annotation with IAM + Globus Auth authentication, S3/Glacier tiered storage with archival retrieval, SNS/SQS event-driven job orchestration, and a Stripe-based subscription model for free and premium tiers.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">Auto-Scaling</span><span class="metric-label">Load Balanced</span></div>
+                            <div class="metric"><span class="metric-value">Tiered</span><span class="metric-label">S3 + Glacier Storage</span></div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">AWS EC2</span>
+                            <span class="tech-tag">S3 / Glacier</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">SNS / SQS</span>
+                            <span class="tech-tag">Lambda</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Thanushri16/Genomics-Annotation-Service-GAS-" target="_blank" rel="noopener" class="project-link">View Code →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-tags="cloud backend">
+                        <div class="project-header">
+                            <h3>Greenhouse Emissions &amp; Weather Impact</h3>
+                            <span class="project-tag">Big Data</span>
+                        </div>
+                        <p class="project-description">
+                            A Spark/Hive pipeline on Hadoop analyzing greenhouse emissions against weather data at scale, orchestrating Kafka streams alongside batch processing workflows over HDFS and HBase.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">500M+</span><span class="metric-label">Records/Day</span></div>
+                            <div class="metric"><span class="metric-value">82%</span><span class="metric-label">E2E Latency ↓</span></div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">PySpark</span>
+                            <span class="tech-tag">Hive</span>
+                            <span class="tech-tag">Hadoop</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">HDFS</span>
+                            <span class="tech-tag">HBase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Thanushri16/Greenhouse-emissions-impact-on-Weather-Big-Data-App-" target="_blank" rel="noopener" class="project-link">View Code →</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -794,27 +1389,42 @@
             <div class="container">
                 <div class="section-header">
                     <div class="section-label">Technical Expertise</div>
-                    <h2 class="section-title">Skills & Technologies</h2>
+                    <h2 class="section-title">Skills &amp; Technologies</h2>
                 </div>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>AI/ML & Agents</h3>
+                        <h3>Languages</h3>
                         <div class="skill-list">
-                            <span class="skill-item">OpenAI Agents SDK</span>
-                            <span class="skill-item">CrewAI</span>
-                            <span class="skill-item">RAG</span>
-                            <span class="skill-item">LLM Evals</span>
-                            <span class="skill-item">PyTorch</span>
-                            <span class="skill-item">TensorFlow</span>
-                            <span class="skill-item">Scikit-learn</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">Java</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">Go</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">C++</span>
+                            <span class="skill-item">HTML / CSS</span>
+                            <span class="skill-item">Shell</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
-                        <h3>Backend & APIs</h3>
+                        <h3>AI &amp; Machine Learning</h3>
                         <div class="skill-list">
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">Java</span>
+                            <span class="skill-item">OpenAI Agents SDK</span>
+                            <span class="skill-item">Temporal</span>
+                            <span class="skill-item">CrewAI</span>
+                            <span class="skill-item">GPT-4</span>
+                            <span class="skill-item">RAG</span>
+                            <span class="skill-item">LLM Evals</span>
+                            <span class="skill-item">pgvector</span>
+                            <span class="skill-item">PyTorch</span>
+                            <span class="skill-item">TensorFlow</span>
+                            <span class="skill-item">Guardrails</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Frameworks &amp; APIs</h3>
+                        <div class="skill-list">
                             <span class="skill-item">REST APIs</span>
                             <span class="skill-item">gRPC</span>
                             <span class="skill-item">FastAPI</span>
@@ -822,34 +1432,76 @@
                             <span class="skill-item">Quart</span>
                             <span class="skill-item">Django</span>
                             <span class="skill-item">Spring Boot</span>
+                            <span class="skill-item">Angular</span>
+                            <span class="skill-item">Celery</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
-                        <h3>Data & Streaming</h3>
+                        <h3>Data &amp; Streaming</h3>
                         <div class="skill-list">
-                            <span class="skill-item">PySpark</span>
-                            <span class="skill-item">Kafka</span>
                             <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">MySQL</span>
                             <span class="skill-item">MongoDB</span>
                             <span class="skill-item">Redis</span>
-                            <span class="skill-item">Snowflake</span>
-                            <span class="skill-item">Cosmos DB</span>
                             <span class="skill-item">DynamoDB</span>
+                            <span class="skill-item">Cosmos DB</span>
+                            <span class="skill-item">Snowflake</span>
+                            <span class="skill-item">Kafka</span>
+                            <span class="skill-item">PySpark</span>
+                            <span class="skill-item">Microsoft Fabric</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
-                        <h3>Cloud & Infrastructure</h3>
+                        <h3>Cloud &amp; Infrastructure</h3>
                         <div class="skill-list">
-                            <span class="skill-item">AWS</span>
                             <span class="skill-item">Azure</span>
+                            <span class="skill-item">AWS</span>
+                            <span class="skill-item">GCP</span>
                             <span class="skill-item">Docker</span>
                             <span class="skill-item">Kubernetes</span>
                             <span class="skill-item">Terraform</span>
                             <span class="skill-item">CI/CD</span>
                             <span class="skill-item">Git</span>
                         </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Systems &amp; Practices</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">Distributed Systems</span>
+                            <span class="skill-item">Concurrency</span>
+                            <span class="skill-item">Event-Driven Arch.</span>
+                            <span class="skill-item">Async I/O</span>
+                            <span class="skill-item">OpenTelemetry</span>
+                            <span class="skill-item">Pytest</span>
+                            <span class="skill-item">Load Testing</span>
+                            <span class="skill-item">RBAC / JWT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Academics</div>
+                    <h2 class="section-title">Education</h2>
+                </div>
+                <div class="education-grid">
+                    <div class="edu-card">
+                        <h3>The University of Chicago</h3>
+                        <div class="edu-degree">M.S. in Computer Science</div>
+                        <div class="edu-meta">Chicago, IL · 09/2021 — 05/2023 · GPA 3.8/4.0</div>
+                        <p class="edu-courses">Algorithms · Applied Software Engineering · Cloud Computing · Data Science</p>
+                    </div>
+                    <div class="edu-card">
+                        <h3>Vellore Institute of Technology</h3>
+                        <div class="edu-degree">B.Tech in Computer Science &amp; Engineering</div>
+                        <div class="edu-meta">India · 07/2017 — 06/2021 · GPA 9.3/10</div>
+                        <p class="edu-courses">Data Structures · Operating Systems · Distributed Systems · Machine Learning</p>
                     </div>
                 </div>
             </div>
@@ -863,16 +1515,16 @@
                 </div>
                 <div class="contact-content">
                     <p>
-                        I'm always interested in discussing AI/ML systems, distributed architecture, and opportunities to build impactful production software. Feel free to reach out!
+                        I'm always interested in discussing backend architecture, distributed systems, and production AI infrastructure — and in opportunities to build things that hold up under real load.
                     </p>
                     <div class="contact-links">
                         <a href="mailto:thanushritharun@gmail.com" class="contact-link">
                             <span>📧</span> Email
                         </a>
-                        <a href="https://www.linkedin.com/in/thanushri-rajmohan/" target="_blank" class="contact-link">
+                        <a href="https://www.linkedin.com/in/thanushri-rajmohan/" target="_blank" rel="noopener" class="contact-link">
                             <span>💼</span> LinkedIn
                         </a>
-                        <a href="https://github.com/Thanushri16" target="_blank" class="contact-link">
+                        <a href="https://github.com/Thanushri16" target="_blank" rel="noopener" class="contact-link">
                             <span>💻</span> GitHub
                         </a>
                     </div>
@@ -884,43 +1536,95 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>© 2026 Thanushri Rajmohan. Built with precision and purpose.</p>
+                <p>© 2026 Thanushri Rajmohan</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // About Me flip cards
+        document.querySelectorAll('.about-col').forEach(card => {
+            const flip = () => {
+                const open = card.classList.toggle('flipped');
+                card.setAttribute('aria-expanded', String(open));
+            };
+            card.addEventListener('click', flip);
+            card.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    flip();
+                }
+            });
+        });
 
+        // Show more / less projects
+        const moreToggle = document.getElementById('moreToggle');
+        const moreProjects = document.getElementById('moreProjects');
+
+        function setMoreOpen(open) {
+            moreProjects.hidden = !open;
+            moreToggle.classList.toggle('open', open);
+            moreToggle.setAttribute('aria-expanded', String(open));
+            moreToggle.innerHTML = (open ? 'Show Fewer Projects' : 'Show More Projects') + ' <span class="chev">▾</span>';
+        }
+
+        moreToggle.addEventListener('click', () => setMoreOpen(moreProjects.hidden));
+
+        // Project filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+
+                // A narrowed filter should surface everything that matches
+                if (filter !== 'all') setMoreOpen(true);
+
+                cards.forEach(card => {
+                    const tags = card.dataset.tags || '';
+                    const show = filter === 'all' || tags.split(' ').includes(filter);
+                    card.classList.toggle('hidden', !show);
+                    if (show) {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        requestAnimationFrame(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        });
+                    }
+                });
+            });
+        });
+
+        // Reveal on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-        document.querySelectorAll('.project-card, .skill-category').forEach(el => {
+        document.querySelectorAll('.project-card, .skill-category, .job, .edu-card, .about-col').forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            el.style.transform = 'translateY(28px)';
+            el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
             observer.observe(el);
         });
     </script>
